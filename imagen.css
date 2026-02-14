@@ -51,7 +51,7 @@ body {
 }
 
 .message {
-  background: #da00fc;
+  background: #fce700;
   bottom: 50px;
   font-family: "Poppins", sans-serif;
   font-size: 40px;
@@ -194,7 +194,7 @@ body {
   height: 11vmin;
   border-radius: 51% 49% 47% 53%/44% 45% 55% 69%;
   background-color: #1aaa15;
-  background-image: linear-gradient(to top, #e300fc, #e300fc);
+  background-image: linear-gradient(to top, #fce700, #fce700);
   transform-origin: bottom center;
   opacity: 0.9;
   box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
@@ -214,7 +214,7 @@ body {
   transform-origin: bottom left;
   border-radius: 4vmin 10vmin 4vmin 4vmin;
   transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg);
-  background-image: linear-gradient(to top, #e300fc, #e300fc);
+  background-image: linear-gradient(to top, #fce700, #fce700);
   z-index: 1;
   opacity: 0.8;
 }
@@ -321,7 +321,7 @@ body {
           animation: light-ans 4s linear infinite backwards;
 }
 .flower__light:nth-child(odd) {
-  background-color: #e300fc;
+  background-color: #fce700;
 }
 .flower__light--1 {
   left: -2vmin;
