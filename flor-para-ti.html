@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flor para ti 🌸</title>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 24px;
+      color: pink;
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 Hecha con código y cariño para ti 🌸</h1>
+  <canvas id="canvas" width="800" height="800"></canvas>
+
+  <script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    let w = canvas.width;
+    let h = canvas.height;
+
+    let i = 0;
+    let hColor = 0;
+
+    function draw() {
+      ctx.translate(w / 2, h / 2);  // centra el dibujo
+      for (let j = 0; j < 2; j++) {
+        ctx.strokeStyle = `hsl(${hColor * 360}, 100%, 50%)`;
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+
+        ctx.rotate((179 * Math.PI) / 180); // lt(179)
+        ctx.lineTo(-i * 0.1, 0);           // backward
+        ctx.arc(0, 0, i * 0.3, 0, 2 * Math.PI / 3);
+
+        ctx.rotate((-14 * Math.PI) / 180); // rt(14)
+        ctx.lineTo(i * 0.1, 0);           // forward
+        ctx.arc(0, 0, i * 0.3, 0, 2 * Math.PI / 3);
+
+        ctx.stroke();
+        hColor += 0.006;
+        i++;
+      }
+
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // reset transform
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+  </script>
+</body>
+</html>
